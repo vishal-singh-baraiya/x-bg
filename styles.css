@@ -1,0 +1,153 @@
+/* Background styling */
+#twitter-x-custom-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  pointer-events: none;
+}
+
+/* Overlay for additional effects */
+#twitter-x-custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Ensure sidebars (left and right) scroll independently */
+[data-testid="sidebarColumn"],
+nav[role="navigation"] {
+  position: relative !important;
+  background-color: transparent !important;
+  overflow-y: visible !important;
+}
+
+/* Main feed and timeline transparency */
+[data-testid="primaryColumn"],
+div[aria-label="Home timeline"] {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/* Dark mode main feed and timeline */
+html[data-color-mode="dark"] [data-testid="primaryColumn"],
+html[data-color-mode="dark"] div[aria-label="Home timeline"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Tweet backgrounds for readability */
+[data-testid="tweet"],
+div[data-testid="cellInnerDiv"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+html[data-color-mode="dark"] [data-testid="tweet"],
+html[data-color-mode="dark"] div[data-testid="cellInnerDiv"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Navigation bar transparency */
+header[role="banner"] {
+  background-color: transparent !important;
+}
+
+html[data-color-mode="dark"] header[role="banner"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Sidebar navigation items */
+nav[role="navigation"] {
+  background-color: transparent !important;
+}
+
+/* Tweet composition area transparency - broad targeting for all nested containers */
+div[data-testid="tweetTextarea_0"],
+div[data-testid="tweetTextarea_0RichTextInputContainer"],
+div[data-testid="tweetTextarea_0_label"],
+div.css-175oi2r.r-1yadl64.r-16y2uox.r-1wbh5a2.r-1pi2tsx,
+div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-1h8ys4a.r-1bylmt5.r-13tjlyg.r-7qyjyx.r-1ftll1t,
+div.css-175oi2r.r-1awozwy.r-18u37iz.r-1wtj0ep.r-136ojw6,
+div.css-175oi2r.r-6koalj.r-16y2uox.r-1wbh5a2.r-1bylmt5.r-184en5c,
+div.css-175oi2r.r-16y2uox,
+div[aria-label="Tweet text"],
+div[style*="background-color: rgb(0, 0, 0)"],
+div.css-175oi2r {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/* Dark mode tweet composition area */
+html[data-color-mode="dark"] div[data-testid="tweetTextarea_0"],
+html[data-color-mode="dark"] div[data-testid="tweetTextarea_0RichTextInputContainer"],
+html[data-color-mode="dark"] div[data-testid="tweetTextarea_0_label"],
+html[data-color-mode="dark"] div.css-175oi2r.r-1yadl64.r-16y2uox.r-1wbh5a2.r-1pi2tsx,
+html[data-color-mode="dark"] div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-1h8ys4a.r-1bylmt5.r-13tjlyg.r-7qyjyx.r-1ftll1t,
+html[data-color-mode="dark"] div.css-175oi2r.r-1awozwy.r-18u37iz.r-1wtj0ep.r-136ojw6,
+html[data-color-mode="dark"] div.css-175oi2r.r-6koalj.r-16y2uox.r-1wbh5a2.r-1bylmt5.r-184en5c,
+html[data-color-mode="dark"] div.css-175oi2r.r-16y2uox,
+html[data-color-mode="dark"] div[aria-label="Tweet text"],
+html[data-color-mode="dark"] div[style*="background-color: rgb(0, 0, 0)"],
+html[data-color-mode="dark"] div.css-175oi2r {
+  background-color: rgba(0, 0, 0, 0) !important;
+   border-color: rgba(0, 0, 0, 0.571) !important;
+}
+
+/* Tweet composition toolbar and buttons transparency */
+div[data-testid="toolBar"],
+button[aria-label="Choose audience"],
+button[aria-label="Everyone can reply"],
+button[aria-label="Add photos or video"],
+button[aria-label="Add a GIF"],
+button[aria-label="Enhance your post with Grok"],
+button[aria-label="Add poll"],
+button[aria-label="Add emoji"],
+button[aria-label="Schedule post"],
+button[aria-label="Tag location"],
+button[data-testid="tweetButtonInline"],
+button[style*="background-color: rgb(239, 243, 244)"],
+button[style*="background-color: rgba(15, 20, 25, 0.75)"] {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-color: rgba(0, 0, 0, 0) !important;
+  backdrop-filter: none !important;
+}
+
+/* Dark mode toolbar and buttons */
+html[data-color-mode="dark"] div[data-testid="toolBar"],
+html[data-color-mode="dark"] button[aria-label="Choose audience"],
+html[data-color-mode="dark"] button[aria-label="Everyone can reply"],
+html[data-color-mode="dark"] button[aria-label="Add photos or video"],
+html[data-color-mode="dark"] button[aria-label="Add a GIF"],
+html[data-color-mode="dark"] button[aria-label="Enhance your post with Grok"],
+html[data-color-mode="dark"] button[aria-label="Add poll"],
+html[data-color-mode="dark"] button[aria-label="Add emoji"],
+html[data-color-mode="dark"] button[aria-label="Schedule post"],
+html[data-color-mode="dark"] button[aria-label="Tag location"],
+html[data-color-mode="dark"] button[data-testid="tweetButtonInline"],
+html[data-color-mode="dark"] button[style*="background-color: rgb(239, 243, 244)"],
+html[data-color-mode="dark"] button[style*="background-color: rgba(15, 20, 25, 0.75)"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: rgba(0, 0, 0, 0) !important;
+  backdrop-filter: none !important;
+}
+
+/* Search bar area transparency */
+div[aria-label="Search Twitter"],
+div[data-testid="searchBar"],
+input[aria-label="Search query"] {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/* Dark mode search bar */
+html[data-color-mode="dark"] div[aria-label="Search Twitter"],
+html[data-color-mode="dark"] div[data-testid="searchBar"],
+html[data-color-mode="dark"] input[aria-label="Search query"] {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
